@@ -239,8 +239,18 @@ export default {
           icon: 'icon-star',
         },
         {
+          name: 'Register_Guest',
+          url: '/register_guest',
+          icon: 'icon-star',
+        },
+        {
           name: 'Register',
           url: '/register',
+          icon: 'icon-star',
+        },
+        {
+          name: 'ListGuest',
+          url: '/listGuest',
           icon: 'icon-star',
         },
         {
