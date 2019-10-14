@@ -17,6 +17,7 @@ import {
 } from '@coreui/react';
 // sidebar nav config
 import navigation from '../../_nav';
+import navItems from '../../sidebar.nav';
 // routes config
 import routes from '../../routes';
 
@@ -46,10 +47,10 @@ class DefaultLayout extends Component {
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-            <AppSidebarNav navConfig={navigation} {...this.props} router={router}/>
+              <AppSidebarNav navConfig={navItems.admin} {...this.props} router={router}/>
             </Suspense>
-            <AppSidebarFooter />
-            <AppSidebarMinimizer />
+            {/* <AppSidebarFooter /> */}
+            {/* <AppSidebarMinimizer /> */}
           </AppSidebar>
           <main className="main">
             <AppBreadcrumb appRoutes={routes} router={router}/>
