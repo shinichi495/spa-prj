@@ -213,10 +213,18 @@ class ListGuest extends Component {
             <Container>
               <Row >
                 <Col xs="4" className=""  >
-                  <h5 style={{ color: "#20a8d8" }}>Tổng Tiền</h5>
+                  <h5>Tiền Thưởng</h5>
                 </Col>
                 <Col xs="8">
-                  <p className="lead" style={styles.Total}>1.099.000đ</p>
+                  <p className="lead" style={styles.Total}>200.000đ</p>
+                </Col>
+              </Row>
+              <Row >
+                <Col xs="4" className=""  >
+                  <h5 >Tổng Tiền</h5>
+                </Col>
+                <Col xs="8">
+                  <p className="lead" style={styles.Total}>1.299.000đ</p>
                 </Col>
               </Row>
               <Row>
@@ -224,7 +232,7 @@ class ListGuest extends Component {
                   <h5>Trả Trước</h5>
                 </Col>
                 <Col xs="8">
-                  <p className="lead" style={styles.Total}>400.000đ</p>
+                  <p className="lead" style={styles.Total}>1.299.000đ</p>
                 </Col>
               </Row>
               <Row>
@@ -232,13 +240,13 @@ class ListGuest extends Component {
                   <h5>Còn Lại</h5>
                 </Col>
                 <Col xs="8">
-                  <p className="lead" style={styles.Total}>699.000đ</p>
+                  <p className="lead" style={styles.Total}>0đ</p>
                 </Col>
               </Row>
               <Row>
                 <Col xs="9" className=""  >
                   <button type="button" className="btn btn-brand btn-reddit" onClick={this.toggleLarge}>
-                    <i class="fa fa-trash"></i><span>Huy</span>
+                    <i class="fa fa-trash"></i><span>Hủy</span>
                   </button>
                 </Col>
                 <Col xs="3" className=""  >

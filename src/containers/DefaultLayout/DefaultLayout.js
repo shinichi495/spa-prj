@@ -62,7 +62,7 @@ class DefaultLayout extends Component {
             <Suspense>
               <AppSidebarNav navConfig={
                 
-                navItems.letan
+                navItems.admin
               } 
                 {...this.props} router={router}/>
             </Suspense>
