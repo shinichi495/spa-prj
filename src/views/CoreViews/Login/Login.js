@@ -7,7 +7,7 @@ const styles ={
   backgroundImage: {
     backgroundImage:`url(${Login_Image})`,
     height: "100%",
-  backgroundPosition: "center",
+    backgroundPosition: "center",
   }}
  
 class Login extends Component {
@@ -25,8 +25,9 @@ class Login extends Component {
     if (this.state.tk == 'admin') {
       roles = 1
     } 
+    let path = roles == 1 ? 'base/Employee' : 'addGuest' 
     this.props.history.push({
-      pathname : '/addGuest',
+      pathname : path,
       state : {role : roles}
     });
   } 

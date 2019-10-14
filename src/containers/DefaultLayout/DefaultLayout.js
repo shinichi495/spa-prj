@@ -23,8 +23,11 @@ const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
 
 class DefaultLayout extends Component {
-
+  state = {
+    navT : navItems.admin
+  }
   constructor(props) {
+    
     super(props);
     // let a = this.props.location.state.role;
     // console.log('----namph-----', a);
@@ -35,9 +38,16 @@ class DefaultLayout extends Component {
     // let a = this.props.location.state;
     // console.log('----namph-----', a);
     // this.navType = a == 1 ? navItems.admin : navItems.letan;
+    if (this.props.location.state) {
+      const {role} = this.props.location.state;
+      console.log('----namph-----', role);
+      this.setState({
+        navT: role == 1 ? navItems.admin : navItems.letan
+      }) 
+    }
+    
+    
   }
-
-  
 
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
@@ -60,9 +70,8 @@ class DefaultLayout extends Component {
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-              <AppSidebarNav navConfig={
-                
-                navItems.admin
+              <AppSidebarNav navConfig={ 
+                this.state.navT
               } 
                 {...this.props} router={router}/>
             </Suspense>
