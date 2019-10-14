@@ -2,7 +2,7 @@ const letan = {
     items: [
         {
             name: 'Thêm Khách Hàng',
-            url: '/register_guest',
+            url: '/addGuest',
             icon: 'icon-star',
         },
         {
@@ -15,7 +15,7 @@ const letan = {
 const admin = {
     items : [
         {
-            name: 'Quản Lí Nhân Viên',
+            name: 'Quản Lí Nhân Viên',
             url: '/base/Employee',
             icon: 'icon-puzzle',
         }
