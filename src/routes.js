@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './views/CoreViews/Login/Login';
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
 const Carousels = React.lazy(() => import('./views/Base/Carousels'));
@@ -34,14 +35,18 @@ const Typography = React.lazy(() => import('./views/Theme/Typography'));
 const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
-// const Employee = React.lazy(() => import('./views/CoreViews/Employee/Employee'));
+const Employee = React.lazy(() => import('./views/CoreViews/Employee/Employee'));
+const RegisterGuest = React.lazy(() => import('./views/CoreViews/Register_Guest/Register_Guest'));
+
+
+
 const ListGuest = React.lazy(() => import('./views/CoreViews/ListGuest/ListGuest'));
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-  { path: '/', exact: true, name: 'Home' },
+  { path: '/', exact: true, name: 'Trang Chủ' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/ListGuest', name: 'ListGuest', component: ListGuest },
-  // { path: '/base/Employee', name: 'Employee', component: Employee },
+  
+  { path: '/base/Employee', name: 'Employee', component: Employee },
   { path: '/theme', exact: true, name: 'Theme', component: Colors },
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },
@@ -81,6 +86,10 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+  
+  { path: '/login', exact: true, name: 'Login Tài Khoản', component: Login },
+  { path: '/ListGuest', name: 'Danh Sách Khách Hàng', component: ListGuest },
+  { path: '/addGuest', exact: true, name: 'Thêm Khách Hàng', component: RegisterGuest },
 ];
 
 export default routes;
