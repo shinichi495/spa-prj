@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import Login_Image from '../../../Images/Login_Image.jpg'
-import {Redirect} from 'react-router-dom';
+import Admin_Login from '../../../Images/Hinh1.jpg'
 // import { url } from 'inspector';
 const styles ={
   backgroundImage: {
-    backgroundImage:`url(${Login_Image})`,
+    backgroundImage:`url(${Admin_Login})`,
     height: "100%",
-  backgroundPosition: "center",
-  }}
+    backgroundPosition: "center",
  
-class Login extends Component {
-  login = (e)=>{
-e.preventDefault();
-this.props.history.push("/dashboard")
-  } 
+ 
+  }}
+class AdminLogin extends Component {
   render() {
     return (
-      <div className="app flex-row align-items-center" style={styles.backgroundImage}>
+      <div className="app flex-row align-items-center" style={styles.backgroundImage} >
         <Container >
           <Row className="justify-content-center" >
-            <Col md="8">
+            <Col md="6">
               <CardGroup>
                 <Card className="p-4">
                   <CardBody>
@@ -45,7 +41,7 @@ this.props.history.push("/dashboard")
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                          <Button type="button" onClick={(e)=>this.login(e)} color="primary" className="px-4">Đăng Nhập</Button>
+                          <Button color="primary" className="px-4">Đăng Nhập</Button>
                         </Col>
                         {/* <Col xs="6" className="text-right">
                           <Button color="link" className="px-0">Quên Mật Khẩu?</Button>
@@ -54,21 +50,13 @@ this.props.history.push("/dashboard")
                     </Form>
                   </CardBody>
                 </Card>
-                <Card className="text-white bg-primary py-5 d-md-down-none" style={{ width: '44%' }}>
-                  <CardBody className="text-center">
-                    <div>
-                      <h2>Giới Thiệu Spa</h2>
-                      <p>AYA Spa & Skin care – nơi bạn đến sẽ yêu, đi sẽ nhớ!.</p>                     
-                    </div>
-                  </CardBody>
-                </Card>
               </CardGroup>
             </Col>
           </Row>
-        </Container>  
-        </div>       
+        </Container>
+      </div>
     );
   }
 }
 
-export default Login;
+export default AdminLogin;

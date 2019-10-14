@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Button, Card, CardBody,Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import Image_Guest from '../../../Images/Image_Guest.jpg'
 const styles ={
   backgroundImage: {
@@ -32,10 +32,20 @@ class Register_Guest extends Component {
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
-                        <InputGroupText>@</InputGroupText>
+                        <InputGroupText>
+                        <i className="cui-phone icons"></i>
+                        </InputGroupText>
                       </InputGroupAddon>
                       <Input type="text" placeholder="Số Điện Thoại" autoComplete="email" />
-                    </InputGroup>                                  
+                    </InputGroup>     
+                    <InputGroup className="mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                        <i className="cui-home icons"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input type="text" placeholder="Địa Chỉ" autoComplete="email" />
+                    </InputGroup>                               
                     <Button color="success" block>Thêm Khách Hàng</Button>
                   </Form>
                 </CardBody>
