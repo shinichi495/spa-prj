@@ -24,6 +24,21 @@ const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
 
 class DefaultLayout extends Component {
 
+  constructor(props) {
+    super(props);
+    // let a = this.props.location.state.role;
+    // console.log('----namph-----', a);
+    // this.navType = a == 1 ? navItems.admin : navItems.letan;
+  }
+
+  componentDidMount() {
+    // let a = this.props.location.state;
+    // console.log('----namph-----', a);
+    // this.navType = a == 1 ? navItems.admin : navItems.letan;
+  }
+
+  
+
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
 
   signOut(e) {
@@ -32,6 +47,7 @@ class DefaultLayout extends Component {
   }
 
   render() {
+    
     return (
       <div className="app">
         <AppHeader fixed>
@@ -44,7 +60,11 @@ class DefaultLayout extends Component {
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
-              <AppSidebarNav navConfig={navItems.letan} {...this.props} router={router}/>
+              <AppSidebarNav navConfig={
+                
+                navItems.letan
+              } 
+                {...this.props} router={router}/>
             </Suspense>
           </AppSidebar>
           <main className="main">
