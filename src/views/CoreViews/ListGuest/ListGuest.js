@@ -62,9 +62,9 @@ class ListGuest extends Component {
   }
   render() {
     return (
-      <div className="animated fadeIn" style={styles.backgroundImage} >
+      <div className="animated fadeIn" >
         <Row className="justify-content-center" >
-          <Col xs="12" sm="3" lg="8">
+          <Col xs="12">
             <Card className=" bg-white mt-3">
               <CardHeader className="pb-0 ">
                 <Row className="justify-content-center" >
@@ -152,15 +152,6 @@ class ListGuest extends Component {
                         <button type="button" className="btn btn-brand btn-dribbble">Xem Chi Tiết</button>
                       </td>
                     </tr>
-                    <tr>
-                      <td>Phạm Ngọc Phương Thư</td>
-                      <td>03794755555</td>
-                      <td>
-                      <button type="button" className="btn btn-brand btn-dribbble">
-                    <i class="fa fa-female"></i><span>Chi Tiết</span>
-                  </button>
-                      </td>
-                    </tr>
                   </tbody>
                 </Table>
               </CardBody>
@@ -241,12 +232,12 @@ class ListGuest extends Component {
                   <h5>Còn Lại</h5>
                 </Col>
                 <Col xs="8">
-                  <p className="lead" style={styles.Total}>3.400.000đ</p>
+                  <p className="lead" style={styles.Total}>699.000đ</p>
                 </Col>
               </Row>
               <Row>
                 <Col xs="9" className=""  >
-                  <button type="button" className="btn btn-brand btn-reddit">
+                  <button type="button" className="btn btn-brand btn-reddit" onClick={this.toggleLarge}>
                     <i class="fa fa-trash"></i><span>Huy</span>
                   </button>
                 </Col>

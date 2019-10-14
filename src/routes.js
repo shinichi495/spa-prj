@@ -37,7 +37,9 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 const Employee = React.lazy(() => import('./views/CoreViews/Employee/Employee'));
 const RegisterGuest = React.lazy(() => import('./views/CoreViews/Register_Guest/Register_Guest'));
-
+const Product = React.lazy(() => import('./views/CoreViews/Product/Product'));
+const Services = React.lazy(() => import('./views/CoreViews/Product/Services'));
+const ReceiptManage = React.lazy(() => import('./views/CoreViews/ReceiptManage/ReceiptManage'));
 
 
 const ListGuest = React.lazy(() => import('./views/CoreViews/ListGuest/ListGuest'));
@@ -90,6 +92,9 @@ const routes = [
   { path: '/login', exact: true, name: 'Login Tài Khoản', component: Login },
   { path: '/ListGuest', name: 'Danh Sách Khách Hàng', component: ListGuest },
   { path: '/addGuest', exact: true, name: 'Thêm Khách Hàng', component: RegisterGuest },
+  { path: '/Product', exact: true, name: 'Thêm Sản Phẩm', component: Product },
+  { path: '/Services', exact: true, name: 'Thêm Liệu Trình', component: Services},
+  { path: '/ReceiptManage', exact: true, name: 'Quản Lý Hóa Đơn', component: ReceiptManage}
 ];
 
 export default routes;

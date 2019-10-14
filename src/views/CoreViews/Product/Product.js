@@ -77,7 +77,7 @@ export default class Product extends Component {
                   </Form>
                 </CardBody>
                 <CardFooter>
-                  <Button type="submit" size="lg" color="primary">Thêm</Button>
+                  <Button type="submit" size="lg" color="primary" style={{float:"right"}}>Thêm</Button>
                 </CardFooter>
               </Card>
             </Col>

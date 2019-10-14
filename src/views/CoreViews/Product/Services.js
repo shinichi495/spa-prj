@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Table, CardFooter, Label, FormGroup, Badge, FormText, CardHeader, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 import listGuest from '../../../Images/AdminLogin.jpg'
-import MatNa from '../../../Images/MatNa.png'
-import Muoi from '../../../Images/Muoi.png'
-import TamTrang from '../../../Images/TamTrang.jpg'
+import Hinh1 from '../../../Images/tanmobung.jpg'
+import Hinh2 from '../../../Images/trimunlung.jpg'
+import Hinh3 from '../../../Images/tanbody.jpeg'
 
 
 export default class Services extends Component {
@@ -15,17 +15,43 @@ export default class Services extends Component {
             <Col xs="4">
               <Card className="mt-2">
                 <CardHeader>
-                  <strong>Thêm Dịch Vụ</strong>
+                  <strong>Thêm Liệu Trình</strong>
                 </CardHeader>
                 <CardBody>
                   <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
                     <FormGroup row>
                       <Col md="3">
-                        <Label>Tên Dịch Vụ</Label>
+                        <Label>Tên</Label>
                       </Col>
                       <Col xs="12" md="9">
                         <Input type="text" id="text-input" name="text-input" />
                       </Col>
+                    </FormGroup>
+                    <FormGroup row>
+                      <Col md="3">
+                        <Label htmlFor="email-input">Dịch Vụ</Label>
+                      </Col>
+                      <Col xs="12" md="9">
+                        <Input type="select" name="select" id="select">
+                          <option value="0">Tan Mỡ Bụng RF</option>
+                          <option value="1">Tan Body</option>
+                          <option value="2">Trị Mụn Lưng</option>
+                        </Input>
+                      </Col>
+                    </FormGroup>
+                    <FormGroup row>
+                      <Col md="3">
+                        <Label htmlFor="email-input">Dịch Vụ</Label>
+                      </Col>
+                      <Col xs="12" md="9">
+                        <Input type="select" name="select" id="select">
+                          <option value="0">Tan Mỡ Bụng RF</option>
+                          <option value="1">Tan Body</option>
+                          <option value="2">Trị Mụn Lưng</option>
+                        </Input>
+                      </Col>
+                      <Col xs="7"></Col>
+                      <Col xs="5"><a href="url">Thêm Dịch Vụ</a></Col>
                     </FormGroup>
                     <FormGroup row>
                       <Col md="3">
@@ -65,7 +91,7 @@ export default class Services extends Component {
                   </Form>
                 </CardBody>
                 <CardFooter>
-                  <Button type="submit" size="lg" color="primary">Thêm</Button>
+                  <Button style={{float:"right"}} type="submit" size="lg" color="primary">Thêm</Button>
                 </CardFooter>
               </Card>
             </Col>
@@ -79,34 +105,34 @@ export default class Services extends Component {
                     <thead>
                       <tr>
                         <th></th>
-                        <th style={{width:"25%"}}>Tên Dịch Vụ</th>
-                        <th style={{width:"15%"}}>Giá</th>
-                        <th style={{width:"20%"}}></th>
+                        <th style={{ width: "25%" }}>Tên Dịch Vụ</th>
+                        <th style={{ width: "15%" }}>Giá</th>
+                        <th style={{ width: "20%" }}></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><img style={{width:"80%"}} src={TamTrang}></img></td>
-                        <td>Kem Tắm Trắng</td>
-                        <td style={{color:"red"}}>350.000đ</td>
+                        <td><img style={{ width: "80%" }} src={Hinh1}></img></td>
+                        <td>Tan Mỡ Bụng RF</td>
+                        <td style={{ color: "red" }}>350.000đ</td>
                         <td>
                           <button type="button" className="btn btn-primary mr-1" onClick={this.toggleLarge}>Sửa</button>
                           <button type="button" className="btn btn-danger" onClick={this.toggleLarge}>Xóa</button>
                         </td>
                       </tr>
                       <tr>
-                        <td><img style={{width:"80%"}} src={Muoi}></img></td>
-                        <td>Muối Epsom Trà xanh Tẩy tế bào chết</td>
-                        <td style={{color:"red"}}>450.000đ</td>
+                        <td><img style={{ width: "80%" }} src={Hinh3}></img></td>
+                        <td>Tan Body RF</td>
+                        <td style={{ color: "red" }}>450.000đ</td>
                         <td >
                           <button type="button" className="btn btn-primary mr-1" onClick={this.toggleLarge}>Sửa</button>
                           <button type="button" className="btn btn-danger" onClick={this.toggleLarge}>Xóa</button>
                         </td>
                       </tr>
                       <tr>
-                        <td><img style={{width:"80%"}} src={MatNa}></img></td>
-                        <td>Mặt nạ thanh tẩy, trắng da gel CO2 Dr.Select</td>
-                        <td style={{color:"red"}}>200.000đ</td>
+                        <td><img style={{ width: "80%" }} src={Hinh2}></img></td>
+                        <td>Trị Mụn Lưng</td>
+                        <td style={{ color: "red" }}>200.000đ</td>
                         <td >
                           <button type="button" className="btn btn-primary mr-1" onClick={this.toggleLarge}>Sửa</button>
                           <button type="button" className="btn btn-danger" onClick={this.toggleLarge}>Xóa</button>
@@ -116,6 +142,7 @@ export default class Services extends Component {
                   </Table>
                 </CardBody>
                 <CardFooter>
+                  <button style={{ float: "right" }} type="button" className="btn btn-primary" onClick={this.toggleLarge}>Thêm Dịch Vụ</button>
                 </CardFooter>
               </Card>
             </Col>

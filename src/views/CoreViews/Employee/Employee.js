@@ -8,7 +8,8 @@ const styles = {
     backgroundPosition: "center",
 
 
-  }}
+  }
+}
 class Employee extends Component {
   constructor(props) {
     super(props);
@@ -38,42 +39,44 @@ class Employee extends Component {
     return (
       <div className="animated fadeIn" >
         <Row className="justify-content-center" >
-          <Col xs="12" sm="3" lg="8">
+          <Col xs="12" >
             <Card className="mt-3" >
               <CardHeader className="pb-0 ">
                 <Row className="justify-content-center" >
                   <h1 >Danh Sách Nhân Viên</h1>
                 </Row>
               </CardHeader  >
-              <Table className="table table-responsive-xl  table-striped border-black table-bordered" >
-                <thead>
-                  <tr>
-                    <th>Tên Nhân Viên</th>
-                    <th>Số Điện Thoại</th>
-                    <th>Bộ Phận</th>
-                    <th>Chi Tiết</th>
+              <CardBody>
+                <Table className="table table-responsive-xl  table-striped border-black table-bordered" >
+                  <thead>
+                    <tr>
+                      <th>Tên Nhân Viên</th>
+                      <th>Số Điện Thoại</th>
+                      <th>Bộ Phận</th>
+                      <th style={{width:"15%"}}>Chi Tiết</th>
 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Hoàng Bảo Vy</td>
-                    <td>0936789499</td>
-                    <td>Tư Vấn Viên</td>
-                    <td>
-                      <button type="button" className="btn btn-brand btn-dribbble" onClick={this.toggleLarge}>Xem Chi Tiết</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Hoàng Bảo Vy</td>
-                    <td>0936789499</td>
-                    <td>Tư Vấn Viên</td>
-                    <td>
-                      <button type="button" className="btn btn-brand btn-dribbble" onClick={this.toggleLarge}>Xem Chi Tiết</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hoàng Bảo Vy</td>
+                      <td>0936789499</td>
+                      <td>Tư Vấn Viên</td>
+                      <td>
+                        <button type="button" className="btn btn-brand btn-dribbble" onClick={this.toggleLarge}>Xem Chi Tiết</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hoàng Bảo Vy</td>
+                      <td>0936789499</td>
+                      <td>Tư Vấn Viên</td>
+                      <td>
+                        <button type="button" className="btn btn-brand btn-dribbble" onClick={this.toggleLarge}>Xem Chi Tiết</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </CardBody>
             </Card>
           </Col>
         </Row>
@@ -100,12 +103,12 @@ class Employee extends Component {
                         <Label htmlFor="company">Hoa Hồng</Label>
                         <Input type="text" id="company" />
                       </FormGroup>
-                      <FormGroup>                          
-                            <Label htmlFor="city">Ngày Làm Việc</Label>
-                            <Input type="text" id="city" />                          
+                      <FormGroup>
+                        <Label htmlFor="city">Ngày Làm Việc</Label>
+                        <Input type="text" id="city" />
                       </FormGroup>
                       <FormGroup>
-                        <button type="button" className="btn btn-primary">Xác Nhận</button>
+                        <button style={{ float: "right" }} type="button" className="btn btn-primary">Xác Nhận</button>
                       </FormGroup>
                     </CardBody>
                   </Card>

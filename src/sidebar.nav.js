@@ -18,7 +18,22 @@ const admin = {
             name: 'Quản Lí Nhân Viên',
             url: '/base/Employee',
             icon: 'icon-puzzle',
-        }
+        },
+        {
+            name: 'Thêm Sản Phẩm',
+            url: '/Product',
+            icon: 'icon-puzzle',
+        },
+        {
+            name: 'Thêm Liệu Trình',
+            url: '/Services',
+            icon: 'icon-puzzle',
+        },
+        {
+            name: 'Quản Lý Hóa Đơn',
+            url: '/ReceiptManage',
+            icon: 'icon-puzzle',
+        }              
     ]
 }
 const nav = {
