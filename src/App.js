@@ -11,7 +11,9 @@ const DefaultLayout = React.lazy(() => import('./containers/DefaultLayout'));
 // Pages
 const Login = React.lazy(() => import('./views/CoreViews/Login/Login'));
 const Register_Guest = React.lazy(() => import('./views/CoreViews/Register_Guest/Register_Guest'));
-const AdminLogin = React.lazy(() => import('./views/CoreViews/AdminLogin/AdminLogin'));
+const Product = React.lazy(() => import('./views/CoreViews/Product/Product'));
+const Services = React.lazy(() => import('./views/CoreViews/Product/Services'));
+const Employee = React.lazy(() => import('./views/CoreViews/Employee/Employee'));
 const Register = React.lazy(() => import('./views/Pages/Register'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
@@ -25,6 +27,9 @@ class App extends Component {
             <Switch>
               <Route exact path="/login" name="Login Page" render={props => <Login {...props}/>} />
               <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />  
+              <Route exact path="/Employee" name="Employee Page" render={props => <Employee {...props}/>} />  
+              <Route exact path="/Product" name="Product" render={props => <Product {...props}/>} />  
+              <Route exact path="/Services" name="Services" render={props => <Services {...props}/>} />  
               <Route exact path="/dashboard" name="Dashboard" render={props => <DefaultLayout {...props}/>} />  
               <Route exact path="/register_guest" name="Register_Guest Page" render={props => <Register_Guest {...props}/>} />
               <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />

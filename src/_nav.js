@@ -43,7 +43,17 @@ export default {
       children: [     
         {
           name: 'Quản Lí Nhân Viên',
-          url: '/base/Employee',
+          url: '/Employee',
+          icon: 'icon-puzzle',
+         },
+         {
+          name: 'Thêm Sản Phẩm',
+          url: '/Product',
+          icon: 'icon-puzzle',
+         },
+         {
+          name: 'Thêm Dịch Vụ',
+          url: '/Services',
           icon: 'icon-puzzle',
          }
         // {
