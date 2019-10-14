@@ -11,10 +11,32 @@ const styles ={
   }}
  
 class Login extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      tk : ''
+    }
+    this.onChangeTK = this.updateInput.bind(this);
+  }
   login = (e)=>{
-e.preventDefault();
-this.props.history.push("/dashboard")
+    e.preventDefault();
+    let roles = 0;
+    if (this.state.tk == 'admin') {
+      roles = 1
+    } 
+    this.props.history.push({
+      pathname : '/addGuest',
+      state : {role : roles}
+    });
   } 
+  
+
+  updateInput (e) {
+    this.setState({
+      tk : e.target.value
+    })
+  }
   render() {
     return (
       <div className="app flex-row align-items-center" style={styles.backgroundImage}>
@@ -33,7 +55,7 @@ this.props.history.push("/dashboard")
                             <i className="icon-user"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="text" placeholder="Tài Khoản" autoComplete="username" />
+                        <Input type="text" placeholder="Tài Khoản" autoComplete="username" onChange={this.onChangeTK}/>
                       </InputGroup>
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
